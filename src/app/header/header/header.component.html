@@ -1,0 +1,54 @@
+<!--<div class="main">
+	<div class="row">
+		<div class="col-md-12">
+				<h1>Quatum Voyages</h1>
+			<div class="container">
+		
+  				<nav>
+    				<ul *ngIf="menus" class="nav navbar-nav navbar-right">
+      					<li ngFor="let menu of menus" class="menu.hasPage">
+							<a *ngIf="!menu.hasPage" class="nav-link" [routerLink]="[menu.redirect]">{{menu.name}}</a>
+						</li>
+						
+      						<a class="nav-link" routerLink = "/">HOME <span class="sr-only">(current)</span></a>
+      					</li>
+      					<li class="nav-item">
+      						<a href="mytravels/travel/travel.component.html"class="nav-link" routerLink="/mytravels">TRAVEL</a>
+      					</li>
+      					<li class="nav-item"><a href="#">OUR INSPIRATIONS </a></li>
+      					<li class="nav-item"><a href="#">CONTACT</a></li>-->
+      					
+    				<!--</ul>
+  				</nav>
+			</div>
+			<div class="banner">
+					<h2>I AM</h2>
+    				<h3>Limitless</h3>
+					</div>
+		</div>
+	</div>	
+</div>-->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="auth">Authentification</a></li>
+        <li class="active"><a routerLink="menus">Appareils</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+<router-outlet></router-outlet>
+</div>
+</div>
+</div>
+
+
+
+
+

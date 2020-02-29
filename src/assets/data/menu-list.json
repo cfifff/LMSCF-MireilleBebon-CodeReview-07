@@ -1,0 +1,19 @@
+[
+{
+    "name": "HOME",
+    "hasPage": false,
+    "redirect": "header"
+  }, {
+    "name": "BLOG",
+    "hasPage": false,
+    "redirect": "header"
+  }, {
+    "name": "TRAVEL",
+    "hasPage": true,
+    "redirect": "travel"
+  },{
+    "name": "CONTACT",
+    "hasPage": false,
+    "redirect": "header"
+  }
+]

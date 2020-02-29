@@ -1,0 +1,99 @@
+.main {
+  position: relative;
+  
+  
+  /*width: 100%;
+  height: 60px;
+  padding: 0 5%;
+
+  text-align: left;
+  z-index: 1;*/
+  height: 1500px;
+ /* padding-top: 1rem;*/
+  background-image: url('src/assets/img/header.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+  border-bottom: 2px solid #dddddd;
+  
+}
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50rem;
+  
+  color: #ffb78c;
+}
+.banner h2 {
+  position: relative;
+  top: 150px;
+  
+ padding: .55rem 0;
+  border-top: 4px solid #ffb78c;
+  border-bottom: 4px solid #ffb78c;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-family: "Work Sans";
+}
+
+.banner h3 {
+  padding-top: 1.11rem;
+  font-size: 11rem;
+  font-weight: 900;
+  font-family: "Abril Fatface";
+}
+
+@media only screen and (max-width: 750px) {
+  .main {
+    height: 40rem;
+  }
+
+  .banner h3 {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .main {
+    height: 30rem;
+  }
+
+  .main h1 {
+    font-size: 6rem;
+  }
+}
+
+.main img {
+  height: 100%;
+  
+  display: block;
+  margin: auto;
+  margin-top: 0;
+  
+  
+}
+.main h1 {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 18px;
+}
+.main nav {
+  display: inline-block;
+  float: right;
+}
+.main nav ul li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+}
+.main nav ul li a {
+  display: block;
+  padding: 24px 15px;
+}
+.main nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
