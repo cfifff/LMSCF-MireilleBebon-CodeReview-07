@@ -1,0 +1,28 @@
+
+
+		<h2>Product Details</h2>
+
+	<div *ngIf="info">
+ 			<h3>{{ info.name }}</h3>
+ 			<h4>{{ info.costPrice | currency }}</h4>
+ 			<p>{{ info.description }}</p>
+
+ 			<!-- Add to Cart (click)="addToCart()"-->
+            <button type="button" class="btn btn-primary add-cart-btn" (click)="addToCart(info)">{{"Add to Cart"}}</button>
+
+	</div>
+
+
+<div class="my-container" *ngIf="info">
+    <div class="row">
+        <!-- Gallery -->
+        
+        <!-- Product Info -->
+        <div class="col-sm-6 col-xs-12">
+            <div class="caption">
+                <a  routerLink="/travel"><h2>{{info.name}}</h2></a>
+                <a  routerLink="/travel"><h3>{{info.description}}</h3></a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,55 @@
+
+
+<div class="main">
+
+<div class="row" *ngFor="let info of infos; index as infoId">
+  <div class="img_container">
+                <img class="img-responsive" src="{{info.img}}">
+  </div>
+  <div class="primary">
+            <h2 class="name text-center">{{info.name}}</h2>
+              <p class="genre text-center"><b>{{info.genre}}</b></p>
+              <p class="start testo text-center">{{info.costPrice| currency }}</p>
+              <p class="description testo text-center"> {{info.description}} </p>
+              <a [routerLink]="['/infos', infoId]"><button type="submit" class="btn btn-primary mb-6">See more details</button></a>
+  </div>
+  <div class="primary">
+            <h2 class="name text-center">{{info.name}}</h2>
+              <p class="genre text-center"><b>{{info.genre}}</b></p>
+              <p class="start testo text-center">{{info.costPrice| currency }}</p>
+              <p class="description testo text-center"> {{info.description}} </p>
+              <a [routerLink]="['/infos', infoId]"><button type="submit" class="btn btn-primary mb-6">See more details</button></a>
+  </div>
+  <div class="img_container">
+                <img class="img-responsive" src="{{info.img}}">
+  </div>
+  <!--<div class="col-xs-12 col-md-6">
+    <div class="prod-info-main prod-wrap clearfix">
+    <div class="row">
+    <div class="col-md-5 col-sm-12 col-xs-12">
+        <div class="img_container">
+                <a [routerLink]="['/infos', infoId]"><img class="img-responsive" src="{{info.img}}"></a>
+        </div>
+    </div>
+    <div class="col-md-7 col-sm-12 col-xs-12">
+      <div class="primary">
+      <div class="product-detail">
+            <h2 class="name text-center">{{info.name}}</h2>
+              <p class="genre text-center"><b>{{info.genre}}</b></p>
+              <p class="start testo text-center">{{info.costPrice| currency }}</p>
+            </div>
+            <div class="description">
+              <p class="description testo text-center"> {{info.description}} </p> 
+              
+        </div>
+      </div>
+  </div>
+</div>
+  </div>
+</div>-->
+</div>
+</div>
+
 <header>
       <img class="logo" src="src/assets/img/travel1.png" alt="logo" />
 
@@ -18,6 +70,7 @@
     <div class="sectiontitle">
       <h2>CURRENT WEATHER</h2>
     </div>
+    
     <section id="weather">
 
         <div class="weather" id="weather1">
@@ -38,4 +91,10 @@
       <div class="venue" id="venue3">
 
       </div>
-    </section>
+    
+
+ 
+
+
+
+

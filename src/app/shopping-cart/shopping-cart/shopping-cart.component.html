@@ -1,0 +1,115 @@
+<div class="container">
+    <h1 class="sc-header">Shopping Cart</h1>
+    <hr>
+    <!-- Shopping Cart Empty -->
+    <div  class="col-md-12">
+        <h3 class="empty"><i>Your Shopping Cart is Empty</i></h3>
+        <a class="btn btn-continue pull-right" [routerLink]="'../travel'">
+            Continue Shopping <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+        </a>
+    </div>
+    <!-- Cart Cards -->
+    <div  class="col-md-8 col-xs-12">
+        <ul class="cart-wrap">
+
+            <li  class="cart-item" [class.even-section]="">
+                <div class="info-wrap">
+                    <div class="cart-item" *ngFor="let item of items">
+                        <span>{{ item.name }} </span>
+                        <span class="price">{{ item.costPrice | currency }}</span>
+                    </div>
+                    <!-- Product Info -->
+                  <!--  <div class="cart-section product-info">
+                        <img [src]="item.product.img">
+                        <p class="item-number">#{{item.product.id}}</p>
+                        <h3 class="item-name">{{item.product.name}} - {{item.option.name}}</h3>
+                        <p class="qty">
+                            <input type="text" class="qty-input" [(ngModel)]="item.quantity" (keyup)="updateItem(item)">
+                            x ${{item.product.onSale? item.product.salePrice: item.product.costPrice}}
+                        </p>
+                        <p class="stock-status" [class.out-stock]="!item.product.inStock">{{item.product.inStock? "In Stock": "Out of Stock"}}</p>
+                    </div>-->
+                    <!-- Total Price -->
+                   <div class="cart-section price-total">
+                        <p id="cartTotal">${{items.costPrice}}</p>
+
+                    </div>
+                  <!--  <div class="cart-section remove-wrap">
+                         <a class="remove-button" (click)="clearCart(items)">x</a> 
+                       <button type="button" class="close" aria-label="Close"><span aria-hidden="true" (click)="clearCart(items)" tooltip="Remove">&times;</span></button>
+                    </div>-->
+                <!--</div>
+            </li>
+        </ul>-->
+
+        <!--<a class="btn btn-continue pull-right" [routerLink]="'../category/all'">
+            Continue Shopping <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+        </a>
+    </div>-->
+    <!-- Order Summary -->
+    <div  class="col-md-4 col-xs-12">
+        <section class="order-summary">
+            <div class="section-header">
+                <h3>Order Summary</h3>
+            </div>
+            <div class="section-body">
+                <div>
+                    <div class="price-info">
+                        <span class="pull-left">Subtotal</span>
+                        <span class="pull-right">${{subTotal}}</span>
+                    </div>
+                    
+                    <hr>
+                    <div class="price-info total">
+                        <span class="pull-left">Total</span>
+                        <!--<span class="pull-right">${{getTotalPrice(items)}}</span>-->
+                    </div>
+                    <!--<a class="btn btn-success btn-check-out" [routerLink]="['/payment']" (click)="onCheckOut()">CHECK OUT</a>-->
+                </div>
+            </div>
+
+
+        </section>
+<!--<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" class="mj-form" action="#" name="form" method="post">
+    <div class="mj-embedded mj-embed-shadow mj-vertical" style="box-sizing: border-box; display: inline-block; font-family: Ubuntu, Helvetica; line-height: normal; text-align: left; background-color: transparent; box-shadow: none; padding: 20px; height: 319px;">
+
+            <div>
+                <label for="name">
+                        
+                </label>
+                <div class="w-preview-fields-content-row" style="box-sizing: border-box; display: flex; flex-direction: row;">
+                            <div class="    w-preview-fields-content-cell" style="box-sizing: border-box; vertical-align: top; flex-grow: 1; padding: 0px 0px 10px; display: block; width: 100%;">
+                                    <input class="w-preview-fields-content-cell-field-53977" type="text" placeholder="first name" name="w-field-field-37030-174940-695980-53977" style="box-sizing: border-box; font-family: Ubuntu, Helvetica; font-size: 14px; height: 36px; padding-left: 17px; margin-right: 20px; border-radius: 3px; border: 2px solid rgb(225, 225, 230); width: 100%;" required="">
+                            </div>
+                        </div>
+            </div>
+
+            <div>
+                <label for="address">
+                    
+                </label>
+                <div class="w-preview-fields-content-row" style="box-sizing: border-box; display: flex; flex-direction: row;">
+                            <div class="    w-preview-fields-content-cell" style="box-sizing: border-box; vertical-align: top; flex-grow: 1; padding: 0px 0px 10px; display: block; width: 100%;">
+                                    <input class="w-preview-fields-content-cell-field-53977" type="text" placeholder=" Address" name="w-field-field-37030-174940-695980-53977" style="box-sizing: border-box; font-family: Ubuntu, Helvetica; font-size: 14px; height: 36px; padding-left: 17px; margin-right: 20px; border-radius: 3px; border: 2px solid rgb(225, 225, 230); width: 100%;" required="" id="address" type="text" formControlName="address">
+                            </div>
+                        </div>
+                
+            </div>
+
+            <div class="mj-form-button" style="box-sizing: border-box; font-family: Ubuntu, Helvetica; text-align: center; vertical-align: middle; flex-grow: 1; margin: 0px; width: 100%; padding: 0px; cursor: pointer;">
+                            <div class="mj-subscribe-button" style="box-sizing: border-box; width: auto; height: 36px; font-family: Ubuntu, Helvetica; font-size: 13px; text-align: center; line-height: 36px; color: white; border-radius: 3px; max-width: 100%; white-space: nowrap; background-color: rgb(2, 52, 153); padding: 0px 10px;">
+                                <div class="button" style="box-sizing: border-box; display: inline-block;" type="submit"><b>PURCHASE</b>
+                                </div>
+                            </div>
+                     </div>
+
+             <button class="button" type="submit">Purchase</button>
+
+    </div>
+</form>-->
+
+    </div>
+
+
+
+</div>

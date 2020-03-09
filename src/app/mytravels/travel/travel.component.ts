@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {TravelService} from 'src/app/service/travel.service'
+import { ActivatedRoute } from '@angular/router';
+
+import { menus } from 'src/app/menus';
+import { ShoppingCartItem, OrderInfo } from 'src/app/travel.interface';
+import  { products } from 'src/app/products';
+
+
+
+
+
 @Component({
   selector: 'app-travel',
   templateUrl: './travel.component.html',
@@ -7,25 +16,27 @@ import {TravelService} from 'src/app/service/travel.service'
 })
 export class TravelComponent implements OnInit {
 
- travelStatus: boolean;
+menu;
+infos = products ;
 
-  constructor() { }
+
+
+ 
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-  	this.travelStatus = this.TravelService.isTravel;
-  }
-  onSignIn() {
-    this.TravelService.signIn().then(
-      () => {
-        console.log('Sign in successful!');
-        this.travelStatus = this.TravelService.isTravel;
-      }
-    );
-  }
-
-  onSignOut() {
-    this.TravelService.signOut();
-    this.travelStatus = this.TravelService.isTravel;
-  }
+  	/*this.route.paramMap.subscribe(params => {
+   this.menu = menus[+params.get('menuId')];
+  });*/
+  
+  
 
 }
+
+
+}
+
+
+
+
+

@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from 'src/app/service/data.service';
+import {Router} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
+
+import { menus } from 'src/app/menus';
+
+
 
 
 @Component({
@@ -8,16 +14,11 @@ import {DataService} from 'src/app/service/data.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-	
- 	menus: any[];
- 	lastUpdate = new Promise((resolve, reject) => {
-    const page = new Page();
-    setTimeout(
-      () => {
-        resolve(page);
-      }, 2000
-    );
-  });
+	 /*menus = menus;
+
+ 	
+/*Menu: any[];
+ 	
 
 	menus = [
    {
@@ -35,7 +36,7 @@ export class HeaderComponent implements OnInit {
     
    },{
      name:"TRAVEL",
-     hasPage: true,
+     hasPage: false,
     	page: [{
       
       redirect: "travel"}],
@@ -47,14 +48,21 @@ export class HeaderComponent implements OnInit {
       
       redirect: "Category 1"}],
    }
- ];
+ ];*/
 
-  constructor(private dataService: DataService) { }
-
+  constructor(private route: ActivatedRoute) { }
+menu;
   ngOnInit(): void {
-  	 this.menus= this.dataService.menus;
+  	 this.route.paramMap.subscribe(params => {
+   this.menu = menus[+params.get('menuId')];
+  });
   }
-  onAllumer() {
+  /*goToPage(pageName:string):void {
+    this.router.navigate(['travel'])
+  }
+
+  
+ /* onAllumer() {
     this.dataService.switchOnAll();
   }
 
@@ -65,5 +73,5 @@ export class HeaderComponent implements OnInit {
       return null;
     }
 
-}
+}*/
 }

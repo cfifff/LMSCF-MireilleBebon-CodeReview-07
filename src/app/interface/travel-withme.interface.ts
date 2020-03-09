@@ -1,13 +1,20 @@
-import { NavItem } from './universal.interface';
 
-export interface MenuInfo {
-  name: string;
-  hasPage: boolean;
-  redirect?: string;
-  Page?: MenuInfo[];
+export interface ShoppingCartItem {
+  product: ProductInfo;
+  quantity: number;
+  
 }
 
-
+export interface ProductInfo {
+  id: string;
+  name: string;
+  description: string;
+  detail: string;
+  img: string;
+  costPrice: string;
+ 
+  
+}
 
 
 

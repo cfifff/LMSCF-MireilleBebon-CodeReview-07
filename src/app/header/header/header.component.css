@@ -1,6 +1,14 @@
-.main {
+/*.main {
   position: relative;
-  
+  display: block;
+    
+    height: 400px;
+    overflow: hidden;
+    width: 100%;
+    background-image: url('src/assets/img/bb1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
   
   /*width: 100%;
   height: 60px;
@@ -8,16 +16,90 @@
 
   text-align: left;
   z-index: 1;*/
-  height: 1500px;
+  /*height: 1500px;
  /* padding-top: 1rem;*/
-  background-image: url('src/assets/img/header.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; 
-  border-bottom: 2px solid #dddddd;
+  
+ /* border-bottom: 2px solid #dddddd;
   
 }
-.banner {
+.main img {
+  height: 100%;
+  max-width: 9999px;
+    position: relative;
+    width: auto;
+  display: block;
+  margin: auto;
+  margin-top: 0;
+  
+  
+}*/
+  .navigation{
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  left: 0px;
+  overflow-y: auto;
+  padding:3px;
+  position: fixed;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+  z-index: 999;
+}
+ul{
+  margin: 0px;
+  padding: 0px;
+}
+.navigation a{
+  color: #3300fd;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+}
+
+/*.main h1 {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 18px;
+
+}*/
+/*.main nav {
+  display: inline-block;
+  float: right;
+  color: #736B92;
+   
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  text-align: center;
+}*/
+.navigation nav ul li {
+
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  margin: 0px;
+  padding: 0px;
+  z-index: 1000;
+}
+.navigation nav ul li a {
+  display: block;
+  padding: 24px 15px;
+}
+.navigation nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+
+/*.banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,36 +146,5 @@
   .main h1 {
     font-size: 6rem;
   }
-}
+}*/
 
-.main img {
-  height: 100%;
-  
-  display: block;
-  margin: auto;
-  margin-top: 0;
-  
-  
-}
-.main h1 {
-  display: inline-block;
-  font-size: 22px;
-  font-weight: bold;
-  padding-top: 18px;
-}
-.main nav {
-  display: inline-block;
-  float: right;
-}
-.main nav ul li {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 13px;
-}
-.main nav ul li a {
-  display: block;
-  padding: 24px 15px;
-}
-.main nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.18);
-}
